@@ -31,7 +31,6 @@ class golang (
   }
 
   $package_prereqs = [
-    'curl',
     'mercurial',
   ]
 
