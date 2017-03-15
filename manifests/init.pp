@@ -40,7 +40,6 @@ class golang (
     command => "curl -o ${download_dir}/go-${version}.tar.gz ${download_location}",
     creates => "${download_dir}/go-${version}.tar.gz",
     unless  => "which go && go version | grep '${version}'",
-    require => Package['curl'],
     timeout => $download_timeout,
   } ->
   exec { 'unarchive':
